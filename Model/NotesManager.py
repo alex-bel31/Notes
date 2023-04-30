@@ -29,7 +29,7 @@ class NotesManager:
     def load_notes_from_csv(self, filename):
         with open(filename, newline='') as csvfile:
             reader = csv.reader(csvfile)
-            next(reader) # skip header
+            next(reader)
             for row in reader:
                 note = Note(row[0], row[1])
                 self.add_note(note) 
